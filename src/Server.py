@@ -12,7 +12,7 @@ class Server:
 
     def __init__(self, host=socket.gethostbyname('127.0.0.1'), port=54004):
         self.socket = socket.socket()
-        self.socket.bind((host, port))
+        self.socket.bind(('', port))
 
     def close(self):
         self.socket.close()
