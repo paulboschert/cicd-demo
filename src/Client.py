@@ -3,9 +3,9 @@
 import socket
 
 class Client:
-    def __init__(self, host=socket.gethostbyname('localhost'), port=54004):
+    def __init__(self, host=socket.gethostname(), port=54004):
         self.socket = socket.socket()
-        self.socket.connect(('', port))
+        self.socket.connect((host, port))
 
     def close(self):
         self.socket.close()
