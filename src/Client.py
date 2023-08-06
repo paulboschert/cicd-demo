@@ -3,9 +3,9 @@
 import socket
 
 class Client:
-    def __init__(self, host=socket.gethostbyname('localhost'), port=54003):
+    def __init__(self, host=socket.gethostbyname('localhost'), port=54004):
         self.socket = socket.socket()
-        self.socket.connect((host, port))
+        self.socket.connect(('', port))
 
     def close(self):
         self.socket.close()
@@ -19,5 +19,5 @@ class Client:
         message = str(a) + " " + str(b)
         self.socket.send(message.encode())
 
-        response, _ = self.socket.recv(1024).decode()
+        response = self.socket.recv(1024).decode()
         return response
