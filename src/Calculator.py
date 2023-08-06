@@ -8,6 +8,12 @@ class Calculator:
     def subtract(self, a, b):
         return a - b
     
+    def multiply(self, a, b):
+        return a * b
+
+    def divide(self, a, b):
+        return a / b
+
     '''
     Get the value of 1 USD to GBP
     '''
